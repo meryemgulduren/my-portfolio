@@ -124,8 +124,11 @@ export function Contact() {
     const TEMPLATE_ID = 'template_wp45mxn'
     const PUBLIC_KEY = 'fA7emHClodoYXYIKy'
 
+    emailjs.init(PUBLIC_KEY)
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY)
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form, {
+        publicKey: PUBLIC_KEY,
+      })
       .then(
         () => {
           alert(language === 'tr' ? 'Mesajınız başarıyla gönderildi!' : 'Message sent successfully!')
