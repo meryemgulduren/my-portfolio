@@ -120,9 +120,9 @@ export function Contact() {
     )
 
     // IMPORTANT: Replace these strings with your own EmailJS IDs from the dashboard
-    const SERVICE_ID = 'service_mjp8ku8' // Your Service ID
-    const TEMPLATE_ID = 'template_wp45mxn' // Your Template ID
-    const PUBLIC_KEY = 'fA7emHClodoYXYIKy' // Your Public Key
+    const SERVICE_ID = 'service_mjp8ku8'
+    const TEMPLATE_ID = 'template_wp45mxn'
+    const PUBLIC_KEY = 'fA7emHClodoYXYIKy'
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY)
