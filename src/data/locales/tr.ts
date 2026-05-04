@@ -50,4 +50,4 @@ export const tr = {
     brand: "Meryem Portfolyo",
     copyright: "© 2026 Meryem Güldüren tarafından tasarlandı & kodlandı"
   }
-} as const
+}

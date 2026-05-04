@@ -21,9 +21,13 @@ export function Navbar({ logoAlt = 'Studio logo' }: NavbarProps) {
     { label: t.nav.contact, href: '#contact' },
   ]
   const barRef = useRef<HTMLElement>(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [lightSurface, setLightSurface] = useState(false)
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
   const scrollToSection = (hash: string) => {
+    setIsMenuOpen(false)
     const target = hash.startsWith('#') ? hash : `#${hash}`
     const el = document.querySelector<HTMLElement>(target)
     if (!el) return
@@ -74,7 +78,7 @@ export function Navbar({ logoAlt = 'Studio logo' }: NavbarProps) {
     { scope: barRef },
   )
 
-  const headerTone = lightSurface
+  const headerTone = lightSurface || isMenuOpen
     ? `bg-black/95 backdrop-blur-md shadow-[0_12px_40px_-24px_rgba(0,0,0,0.5)]`
     : 'bg-transparent'
 
@@ -93,17 +97,19 @@ export function Navbar({ logoAlt = 'Studio logo' }: NavbarProps) {
             width={240}
             height={80}
             className={`brand-mark h-auto w-auto object-contain object-left transition-all duration-500 ${
-              lightSurface ? 'max-h-[3.2rem] sm:max-h-[3.8rem]' : 'max-h-[5rem] sm:max-h-[6rem] md:max-h-[7rem]'
+              lightSurface || isMenuOpen ? 'max-h-[2.8rem] sm:max-h-[3.2rem]' : 'max-h-[4rem] sm:max-h-[5rem]'
             }`}
             decoding="async"
           />
         </button>
-        <div className="flex items-center gap-3 md:gap-7">
+
+        {/* Desktop Menu */}
+        <div className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
             <button
               key={item.href}
               type="button"
-              className="navbar-link hidden text-[0.78rem] font-semibold tracking-[0.3em] transition-colors md:inline-block text-zinc-300 hover:text-white"
+              className="navbar-link text-[0.78rem] font-semibold tracking-[0.3em] transition-colors text-zinc-300 hover:text-white"
               onClick={() => scrollToSection(item.href)}
             >
               {item.label}
@@ -111,17 +117,47 @@ export function Navbar({ logoAlt = 'Studio logo' }: NavbarProps) {
           ))}
         </div>
         
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <button
             type="button"
             onClick={toggleLanguage}
-            className="flex items-center gap-2 rounded-full border px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] shadow-sm transition border-white/40 bg-white/5 text-white hover:bg-white/20"
+            className="flex items-center gap-2 rounded-full border px-3 py-1.5 sm:px-4 sm:py-2 text-[0.6rem] sm:text-[0.68rem] font-bold uppercase tracking-[0.2em] shadow-sm transition border-white/40 bg-white/5 text-white hover:bg-white/20"
           >
             <span>🌍</span>
-            <span>{language === 'tr' ? 'TR | EN' : 'EN | TR'}</span>
+            <span className="hidden xs:inline">{language === 'tr' ? 'TR | EN' : 'EN | TR'}</span>
+            <span className="xs:hidden">{language.toUpperCase()}</span>
+          </button>
+
+          {/* Hamburger Button */}
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+            aria-label="Toggle menu"
+          >
+            <span className={`h-0.5 w-6 rounded-full bg-white transition-transform ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`} />
+            <span className={`h-0.5 w-6 rounded-full bg-white transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
+            <span className={`h-0.5 w-6 rounded-full bg-white transition-transform ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
           </button>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-x-0 top-[60px] z-30 flex flex-col bg-black/95 backdrop-blur-xl transition-all duration-500 md:hidden ${isMenuOpen ? 'h-[calc(100svh-60px)] opacity-100' : 'h-0 opacity-0 overflow-hidden'}`}>
+        <div className="flex flex-1 flex-col items-center justify-center gap-10 px-6 py-12">
+          {navItems.map((item, idx) => (
+            <button
+              key={item.href}
+              type="button"
+              className={`text-2xl font-bold tracking-[0.2em] text-white transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              style={{ transitionDelay: `${idx * 100}ms` }}
+              onClick={() => scrollToSection(item.href)}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
     </header>
   )
 }

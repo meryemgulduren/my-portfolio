@@ -80,11 +80,11 @@ export function Hero() {
         <div className="mt-auto flex w-full flex-col items-center gap-5 sm:gap-7 md:gap-9">
           <h1
             id="hero-greeting"
-            className="m-0 flex w-full max-w-[min(41rem,88vw)] translate-y-2 flex-col items-center gap-7 text-center uppercase leading-none tracking-[0.12em] sm:translate-y-2.5 sm:gap-8 sm:tracking-[0.13em] md:translate-y-3 md:gap-9"
+            className="m-0 flex w-full max-w-[min(41rem,88vw)] -translate-y-8 flex-col items-center gap-7 text-center uppercase leading-none tracking-[0.12em] sm:translate-y-2.5 sm:gap-8 sm:tracking-[0.13em] md:translate-y-3 md:gap-9"
           >
             <span className="sr-only">{`${lineFirst} ${lineSecond}`}</span>
             <span
-              className="font-terminal flex flex-col items-center gap-7 text-[clamp(1.2rem,3.95vw,3.05rem)] sm:gap-8 md:gap-9"
+              className="font-terminal flex flex-col items-center gap-7 text-[clamp(1.65rem,8.5vw,3.05rem)] sm:gap-8 md:gap-9"
               aria-hidden="true"
             >
               <span className="flex flex-wrap justify-center gap-x-[0.1em]">

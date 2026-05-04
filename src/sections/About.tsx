@@ -153,7 +153,7 @@ export function About() {
           <div className="mt-12 w-full flex flex-col gap-8" id="projects-container">
             {/* Project 1 Placeholder */}
             <div className="flex flex-col lg:flex-row items-start justify-between gap-12 mt-12 text-left project-card">
-              <div className="flex-1 -translate-x-4 -translate-y-4 lg:-translate-x-8 lg:-translate-y-6">
+              <div className="flex-1 translate-x-0 -translate-y-4 lg:-translate-x-8 lg:-translate-y-6">
                 <h3 className="font-sans font-bold text-3xl md:text-4xl text-black tracking-wide">
                   {t.projects.bilokmaIyilik.title}
                 </h3>
@@ -162,7 +162,7 @@ export function About() {
                 </div>
               </div>
               <div className="relative w-full lg:w-[45%] flex flex-col items-center lg:items-end mt-12 lg:mt-0">
-                <div className="relative w-full max-w-[550px] translate-x-4 lg:translate-x-8 scale-[1.03] lg:scale-110 origin-right">
+                <div className="relative w-full max-w-[550px] mx-auto translate-x-0 lg:translate-x-8 scale-100 lg:scale-110 origin-center lg:origin-right">
                   {/* Desktop view (Background) */}
                   <img src={iyilikPcImg} alt="İyilik PC Görünümü" className="w-full object-contain rounded-xl drop-shadow-2xl" />
                   {/* Mobile view (Foreground, Overlapping) */}
@@ -195,7 +195,7 @@ export function About() {
 
             {/* Project 2: DOĞAN EMLAK */}
             <div className="flex flex-col lg:flex-row items-start justify-between gap-12 mt-12 text-left project-card">
-              <div className="flex-1 -translate-x-4 -translate-y-4 lg:-translate-x-8 lg:-translate-y-6">
+              <div className="flex-1 translate-x-0 -translate-y-4 lg:-translate-x-8 lg:-translate-y-6">
                 <h3 className="font-sans font-bold text-3xl md:text-4xl text-black tracking-wide">
                   {t.projects.doganEmlak.title}
                 </h3>
@@ -205,7 +205,7 @@ export function About() {
                 </div>
               </div>
               <div className="relative w-full lg:w-[45%] flex flex-col items-center lg:items-end mt-12 lg:mt-0">
-                <div className="relative w-full max-w-[550px] translate-x-4 lg:translate-x-8 scale-[1.03] lg:scale-110 origin-right">
+                <div className="relative w-full max-w-[550px] mx-auto translate-x-0 lg:translate-x-8 scale-100 lg:scale-110 origin-center lg:origin-right">
                   {/* Desktop view (Background) */}
                   <img src={emlakPcImg} alt="Doğan Emlak PC Görünümü" className="w-full object-contain rounded-xl drop-shadow-2xl" />
                   {/* Mobile view (Foreground, Overlapping) */}
@@ -236,7 +236,7 @@ export function About() {
 
             {/* Project 3: Bİ LOKMA */}
             <div className="flex flex-col lg:flex-row items-start justify-between gap-12 mt-12 text-left project-card">
-              <div className="flex-1 -translate-x-4 -translate-y-4 lg:-translate-x-8 lg:-translate-y-6">
+              <div className="flex-1 translate-x-0 -translate-y-4 lg:-translate-x-8 lg:-translate-y-6">
                 <h3 className="font-sans font-bold text-3xl md:text-4xl text-black tracking-wide">
                   {t.projects.bilokma.title}
                 </h3>
@@ -246,7 +246,7 @@ export function About() {
                 </div>
               </div>
               <div className="relative w-full lg:w-[45%] flex flex-col items-center lg:items-end mt-12 lg:mt-0">
-                <div className="relative w-full max-w-[550px] translate-x-4 lg:translate-x-8 scale-[1.03] lg:scale-110 origin-right">
+                <div className="relative w-full max-w-[550px] mx-auto translate-x-0 lg:translate-x-8 scale-100 lg:scale-110 origin-center lg:origin-right">
                   {/* Desktop view (Background) */}
                   <img src={lokmaPcImg} alt="Bi Lokma PC Görünümü" className="w-full object-contain rounded-xl drop-shadow-2xl" />
                   {/* Mobile view (Foreground, Overlapping) */}

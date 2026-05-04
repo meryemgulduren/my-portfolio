@@ -50,4 +50,4 @@ export const en = {
     brand: "Meryem Portfolio",
     copyright: "© 2026 designed & built by Meryem Güldüren"
   }
-} as const
+}
