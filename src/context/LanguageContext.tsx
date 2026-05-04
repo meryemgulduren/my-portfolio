@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, type ReactNode } from 'react'
 import { en } from '@/data/locales/en'
 import { tr } from '@/data/locales/tr'
 
