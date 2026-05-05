@@ -48,7 +48,7 @@ export function Navbar({ logoAlt = 'Studio logo' }: NavbarProps) {
         const home = document.querySelector('#home')
         const bottom =
           home instanceof HTMLElement ? Math.round(home.getBoundingClientRect().bottom) : Number.POSITIVE_INFINITY
-        setLightSurface(bottom <= 118)
+        setLightSurface(bottom <= window.innerHeight * 0.6)
       }
 
       evaluateSurface()

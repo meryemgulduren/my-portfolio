@@ -73,7 +73,7 @@ export function About() {
       className="relative overflow-hidden bg-[#ffeaea] py-24 md:py-32"
       aria-labelledby="about-heading"
     >
-      <div className="mx-auto flex max-w-6xl flex-col px-6">
+      <div className="mx-auto flex max-w-6xl min-[2000px]:max-w-7xl flex-col px-6">
         <div className="relative about-intro" id="about-heading">
           {/* Text Content - Original Width & Flow */}
           <div className="w-full">
@@ -89,7 +89,7 @@ export function About() {
           </div>
 
           {/* Floating Code Card - Absolute on Large Screens */}
-          <div className="mt-12 lg:mt-0 lg:absolute lg:-right-36 lg:top-0 lg:w-[620px] lg:translate-x-0 hidden xl:block">
+          <div className="mt-12 lg:mt-0 lg:absolute lg:-right-36 min-[2000px]:-right-64 lg:top-0 lg:w-[620px] lg:translate-x-0 hidden xl:block transition-all duration-500">
             <div className="relative overflow-hidden rounded-2xl bg-[#1e1e1e] shadow-2xl border border-white/10 font-mono text-[0.8rem] leading-relaxed">
               {/* Terminal Header */}
               <div className="flex items-center gap-2 border-b border-white/5 bg-white/5 px-4 py-3">

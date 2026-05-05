@@ -56,6 +56,10 @@ export function Contact() {
   const sectionRef = useRef<HTMLElement>(null)
   const { t, language } = useLanguage()
   const [isSending, setIsSending] = useState(false)
+  const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string | null }>({
+    type: null,
+    message: null,
+  })
 
   useGSAP(
     () => {
@@ -131,16 +135,27 @@ export function Contact() {
       })
       .then(
         () => {
-          alert(language === 'tr' ? 'Mesajınız başarıyla gönderildi!' : 'Message sent successfully!')
+          setStatus({
+            type: 'success',
+            message: language === 'tr' ? 'Mesajınız başarıyla gönderildi!' : 'Message sent successfully!',
+          })
           form.reset()
         },
         (error) => {
-          alert((language === 'tr' ? 'Gönderim hatası: ' : 'Failed to send: ') + error.text)
+          setStatus({
+            type: 'error',
+            message: (language === 'tr' ? 'Gönderim hatası: ' : 'Failed to send: ') + error.text,
+          })
         },
       )
       .finally(() => {
         setIsSending(false)
         ;(document.activeElement instanceof HTMLElement ? document.activeElement : undefined)?.blur()
+        
+        // Auto-hide status after 5 seconds
+        setTimeout(() => {
+          setStatus({ type: null, message: null })
+        }, 5000)
       })
   }
 
@@ -198,6 +213,17 @@ export function Contact() {
                   required
                 />
               </label>
+              {status.message && (
+                <div 
+                  className={`contact-field mb-2 rounded-xl border px-4 py-3 text-center text-[0.72rem] font-bold tracking-widest uppercase transition-all duration-500 ${
+                    status.type === 'success' 
+                      ? 'border-green-500/20 bg-green-500/10 text-green-700' 
+                      : 'border-red-500/20 bg-red-500/10 text-red-700'
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
               <button
                 type="submit"
                 disabled={isSending}
