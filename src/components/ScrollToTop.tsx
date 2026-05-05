@@ -36,10 +36,9 @@ export function ScrollToTop() {
   )
 
   const handleClick = () => {
-    gsap.to(window, {
-      duration: 1.1,
-      scrollTo: { y: 0, autoKill: true },
-      ease: 'power3.inOut',
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     })
   }
 
@@ -47,7 +46,7 @@ export function ScrollToTop() {
     <button
       ref={buttonRef}
       type="button"
-      className="fixed bottom-8 right-6 z-50 hidden h-12 w-12 items-center justify-center rounded-full bg-chocolate text-cream shadow-lg shadow-chocolate/40 transition-transform hover:-translate-y-1 md:flex"
+      className="fixed bottom-8 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-chocolate text-cream shadow-lg shadow-chocolate/40 transition-transform hover:-translate-y-1"
       aria-label="Scroll back to top"
       onClick={handleClick}
     >
