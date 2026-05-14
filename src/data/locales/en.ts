@@ -17,8 +17,7 @@ export const en = {
     paragraph: "I’m a third-year Software Engineering student at Kocaeli University. I absolutely love what I do, and I bring that positive energy and passion to every single line of code I write. As a full-stack developer, I work on freelance projects, turning ideas into functional, scalable, and modular digital products.",
     portfolio: 'Portfolio',
     projectsTitle: 'Projects',
-    liveProject: 'Live Project',
-    githubRepo: 'GitHub Repo'
+    liveProject: 'Live Project'
   },
   projects: {
     bilokmaIyilik: {

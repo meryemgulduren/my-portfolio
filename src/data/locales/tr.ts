@@ -17,8 +17,7 @@ export const tr = {
     paragraph: "Kocaeli Üniversitesi\'nde üçüncü sınıf Yazılım Mühendisliği öğrencisiyim. Yaptığım işi gerçekten çok seviyorum ve yazdığım her satır koda bu pozitif enerjiyi ve tutkuyu yansıtıyorum. Full-stack geliştirici olarak freelance projeler alıyor, fikirleri fonksiyonel, ölçeklenebilir ve modüler dijital ürünlere dönüştürüyorum.",
     portfolio: 'Portfolyo',
     projectsTitle: 'Projeler',
-    liveProject: 'Canlı Proje',
-    githubRepo: 'GitHub Deposu'
+    liveProject: 'Canlı Proje'
   },
   projects: {
     bilokmaIyilik: {

@@ -170,11 +170,8 @@ export function About() {
                 </div>
                 <div className="mt-16 lg:mt-20 flex flex-col items-center gap-8 translate-x-0 lg:-translate-x-4">
                   <div className="flex flex-wrap items-center justify-center gap-8">
-                    <a href="https://bilokmaiyilik.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lg transition-transform hover:scale-105 mr-4 lg:mr-8">
+                    <a href="https://bilokmaiyilik.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lg transition-transform hover:scale-105">
                       {t.about.liveProject}
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border-2 border-black px-8 py-3.5 text-sm font-semibold tracking-wide text-black transition-all hover:bg-black hover:text-white">
-                      {t.about.githubRepo}
                     </a>
                   </div>
                   
@@ -213,11 +210,8 @@ export function About() {
                 </div>
                 <div className="mt-16 lg:mt-20 flex flex-col items-center gap-8 translate-x-0 lg:-translate-x-4">
                   <div className="flex flex-wrap items-center justify-center gap-8">
-                    <a href="https://doganemlakgroup.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lg transition-transform hover:scale-105 mr-4 lg:mr-8">
+                    <a href="https://doganemlakgroup.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lg transition-transform hover:scale-105">
                       {t.about.liveProject}
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border-2 border-black px-8 py-3.5 text-sm font-semibold tracking-wide text-black transition-all hover:bg-black hover:text-white">
-                      {t.about.githubRepo}
                     </a>
                   </div>
                   
@@ -254,11 +248,8 @@ export function About() {
                 </div>
                 <div className="mt-16 lg:mt-20 flex flex-col items-center gap-8 translate-x-0 lg:-translate-x-4">
                   <div className="flex flex-wrap items-center justify-center gap-8">
-                    <a href="https://bilokmakocaeli.com/?https://bilokmakocaeli.com/&gad_source=1&gad_campaignid=23300076386&gbraid=0AAAABCJ-WmjH2aKMHvrP0iO0yG15S82pw&gclid=CjwKCAjw5NvPBhAoEiwA_2egftWBi99sMtpVK8zzSvJx95lc1iQtsfXqaY8r13CLzaJ0VxlJwHLk3RoCJV0QAvD_BwE" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lg transition-transform hover:scale-105 mr-4 lg:mr-8">
+                    <a href="https://bilokmakocaeli.com/?https://bilokmakocaeli.com/&gad_source=1&gad_campaignid=23300076386&gbraid=0AAAABCJ-WmjH2aKMHvrP0iO0yG15S82pw&gclid=CjwKCAjw5NvPBhAoEiwA_2egftWBi99sMtpVK8zzSvJx95lc1iQtsfXqaY8r13CLzaJ0VxlJwHLk3RoCJV0QAvD_BwE" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lg transition-transform hover:scale-105">
                       {t.about.liveProject}
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border-2 border-black px-8 py-3.5 text-sm font-semibold tracking-wide text-black transition-all hover:bg-black hover:text-white">
-                      {t.about.githubRepo}
                     </a>
                   </div>
                   
