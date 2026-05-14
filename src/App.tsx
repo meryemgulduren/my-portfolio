@@ -3,6 +3,7 @@ import '@/lib/gsap-setup'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { OrganicBackdrop } from '@/components/OrganicBackdrop'
+import { CustomCursor } from '@/components/CustomCursor'
 import { ScrollToTop } from '@/components/ScrollToTop'
 import { About } from '@/sections/About'
 import { Contact } from '@/sections/Contact'
@@ -14,6 +15,7 @@ function App() {
     <LanguageProvider>
       <div className="relative isolate min-h-screen overflow-x-hidden bg-cream-soft font-sans text-chocolate selection:bg-tan-light/62">
         <OrganicBackdrop />
+        <CustomCursor />
         <Navbar logoAlt="Meryem — portfolio home" />
         <main>
           <Hero />
