@@ -75,8 +75,8 @@ export function About() {
     >
       <div className="mx-auto flex max-w-6xl min-[2000px]:max-w-7xl flex-col px-6">
         <div className="relative about-intro" id="about-heading">
-          {/* Text Content - Original Width & Flow */}
-          <div className="w-full">
+          {/* Text Content - Limited width on XL to avoid overlap with floating card */}
+          <div className="w-full xl:max-w-[55%] min-[2000px]:max-w-[60%]">
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.36em] text-black/60">{t.about.eyebrow}</p>
             <h2 className="font-sans font-bold whitespace-pre-line text-5xl tracking-[0.02em] text-black lg:text-[3.85rem] mt-6" style={{ lineHeight: 1.06 }}>
               {t.about.title}
